@@ -419,7 +419,7 @@ hr.new {
         font-size: 14px;
     }
 
-    button {
+    .btn {
         width: 185px;
         height: 48px;
         background-color: var(--soft-red);
@@ -427,7 +427,7 @@ hr.new {
         border: none;
     }
 
-    button .btn {
+    .btn {
         color: white;
         font-size: 14px;
         font-weight: 700;
