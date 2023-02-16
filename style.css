@@ -69,7 +69,7 @@ nav .nav-container {
 .menu-items {
     width: 0%;
     position: absolute;
-    top: -40px;
+    top: -85px;
     right: -60px;
     transform: translate(0.0);
     height: 669px;
@@ -120,13 +120,13 @@ nav .nav-container {
     transition: width 1s ease-in;
 }
 
-picture .main-img {
+.mobile-img {
     width: 400px;
     height: 350px;
     margin: 20px auto;
 }
 
-picture .desktop-img {
+.desktop-img {
     display:none;
 }
 
@@ -384,14 +384,14 @@ hr.new {
         justify-content: space-between;
     }
 
-    picture .desktop-img {
+    .desktop-img {
         display: block;
         width: 730px;
         height: 300px;
         margin: 20px 30px;
     }
 
-    picture .main-img {
+    .mobile-img {
         display: none;
     }
 
@@ -470,7 +470,7 @@ hr.new {
         margin-left: 60px;
     }
 
-    picture .desktop-img {
+    .desktop-img {
         width: 730px;
         height: 300px;
     }
