@@ -1,0 +1,577 @@
+:root {
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* box-sizing: inherit; */
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+.wrapper {
+    width: 475px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+}
+
+.shadow {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.shadow.active {
+    display: block;
+    transition: width 1s ease-in;
+}
+
+.shadow.hidden {
+    display: none;
+}
+
+nav {
+    width: 100%;
+}
+
+nav .nav-container {
+    height: 28px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 40px;
+}
+
+.menu-items {
+    width: 0%;
+    position: absolute;
+    top: -40px;
+    right: -60px;
+    transform: translate(0.0);
+    height: 669px;
+    z-index: 3;
+    background-color: var(--off-white);
+    flex-direction: column;
+    justify-content: start;
+    overflow: hidden;
+}
+
+.menu-items li {
+    margin: 32px 0;
+    list-style: none;
+}
+
+.menu-items li a {
+    text-decoration: none;
+    color: var(--very-dark-blue);
+    font-size: 18px;
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+
+.heading:hover {
+    color: var(--soft-red);
+    cursor: pointer;
+}
+
+.hamburger {
+    display: block;
+}
+
+.close,
+.hamburger {
+    cursor: pointer;
+}
+
+.close {
+    display: none;
+    align-self: flex-end;
+    display: block;
+    margin: 40px 20px 80px 210px;
+}
+
+.show {
+    width: 80%;
+    margin: 0;
+    transition: width 1s ease-in;
+}
+
+picture .main-img {
+    width: 400px;
+    height: 350px;
+    margin: 20px auto;
+}
+
+picture .desktop-img {
+    display:none;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    margin: 0 30px;
+}
+
+.main-text h1 {
+    font-size: 40px;
+    font-weight: 800;
+    margin: 20px 50px 20px 20px;
+    padding-right: 80px;
+    line-height: 40px;
+    color: var(--very-dark-blue)
+}
+
+.main-text p {
+    color: var(--dark-grayish-blue);
+    margin: 20px 20px 20px 20px;
+    padding-right: 30px;
+    line-height: 32px;
+    letter-spacing: 0.2px;
+    font-size: 17px;
+}
+
+button {
+    width: 200px;
+    height: 60px;
+    background-color: var(--soft-red);
+    margin-left: 20px;
+    border: none;
+}
+
+button .btn {
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--very-dark-blue);
+    color: white;
+}
+
+.tech-article {
+    height: 489px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 50px;
+}
+
+.new-info {
+    width: 400px;
+    height: 490px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: var(--very-dark-blue);
+    color: white;
+    padding: 30px 25px;
+    margin: 70px 20px 70px 20px;
+}
+
+.new-info h2 {
+    color: var(--soft-orange);
+    text-align: left;
+    font-size: 32px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.new-info h3 {
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.new-info h3:hover {
+    color: var(--soft-orange);
+}
+
+.new-info p {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: var(--grayish-blue);
+}
+
+hr.new {
+    width: 302px;
+    border: 0;
+    height: 0;
+    border-bottom: 1px solid white;
+    align-self: center;
+}
+
+.tech-news {
+    height: 451px;
+    padding: 0 20px;
+    margin: -40px 20px 100px 50px;
+}
+
+.pc-info,
+.laptop-info,
+.gaming-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 30px;
+    margin-bottom: -30px;
+}
+
+.div-img-wrapper img {
+    width: 100px;
+    height: 129px;
+    margin-top: 30px;
+}
+
+.retro-pc,
+.laptops,
+.gaming {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 32px;
+}
+
+.one,
+.two,
+.three {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--grayish-blue);
+    margin-top: 15px;
+}
+
+.tech-title {
+    color: black;
+    font-size: 24px;
+    font-weight: 800;
+    margin-top: -10px;
+    text-decoration: none;
+}
+
+.tech-title:hover {
+    color: var(--soft-red)
+}
+
+.tech-info {
+    color: var(--dark-grayish-blue);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    padding-right: 80px;
+}
+
+
+@media screen and (min-width: 600px) {
+    .hamburger {
+        display: none;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .menu-items {
+        display: block;
+    }
+
+    nav {
+        width: 1400px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-wrapper {
+        margin-left: 90px;
+    }
+    .nav-container {
+        width: 100%;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        /* gap: 200px; */
+        margin-top: 20px;
+        /* padding-left: 200px; */
+    }
+
+    .menu-items {
+        width: 600px;
+        height: 26px;
+        /* margin-right: 80px; */
+        /* position: absolute; */
+        top: 0px;
+        right: 50px;
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 20px;
+    }
+
+    .menu-items li a {
+        text-decoration: none;
+        color: var(--very-dark-blue);
+        font-size: 15px;
+        font-weight: 400;
+        display: flex;
+        flex-direction: row;
+        transition: 0.3s ease-in-out;
+    }
+
+    .menu-items li a:hover {
+        cursor: pointer;
+        color: var(--soft-red);
+        
+    }
+
+    .main-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    picture .desktop-img {
+        display: block;
+        width: 730px;
+        height: 300px;
+        margin: 20px 30px;
+    }
+
+    picture .main-img {
+        display: none;
+    }
+
+    .main-text {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .main-text h1 {
+        font-size: 40px;
+        padding-right: 0px;
+        margin-left: 25px;
+        margin-top: 10px;
+        line-height: 45px;
+        letter-spacing: 1.5px;
+    }
+
+    .main-text p {
+        width: 375px;
+        color: var(--dark-grayish-blue);
+        margin: 0px 0 10px 20px;
+        padding: 10px 20px;
+        line-height: 22px;
+        letter-spacing: 0.2px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 185px;
+        height: 48px;
+        background-color: var(--soft-red);
+        margin-left: 10px;
+        border: none;
+    }
+
+    button .btn {
+        color: white;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
+    
+    .new-info {
+        width: 350px;
+        height: 510px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        background-color: var(--very-dark-blue);
+        color: white;
+        padding: 20px 30px;
+        margin: -30px 20px 70px 20px;
+    }
+
+    .new-info h2 {
+        font-size: 40px;
+    }
+
+    .tech-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 50px 0px 0 20px;
+    }
+}
+
+@media screen and (min-width: 850px) {
+    .nav-container {
+        padding: 0 100px 0 50px;
+    }
+
+    .logo-wrapper {
+        margin-left: 60px;
+    }
+
+    picture .desktop-img {
+        width: 730px;
+        height: 300px;
+    }
+
+    .main-text h1 {
+        font-size: 56px;
+        margin-left: -15px;
+        margin-top: 10px;
+        margin-right: 20px;
+        padding-right: 0px;
+        line-height: 56px;
+        letter-spacing: 0px;
+    }
+
+    .main-text p {
+        width: 375px;
+        color: var(--dark-grayish-blue);
+        margin: -10px 0 20px 0px;
+        padding: 0px 20px 0 10px;
+        line-height: 26px;
+        letter-spacing: 0.2px;
+        font-size: 15px;
+    }
+
+    .menu-items {
+        margin-right: 50px;
+    }
+
+    .tech-article {
+        width: 350px;
+        height: 511px;
+    }
+
+    .new-info {
+        margin-left: -20px;
+    }
+
+    .new-info h2 {
+        margin-top: -10px;
+    }
+
+    .new-info h3 {
+        font-size: 20px;
+        font-weight: 700;
+        margin-top: 0px;
+    }
+
+    .new-info p {
+        font-size: 15px;
+        line-height: 26px;
+        margin-bottom: -5px;
+    }
+
+    .tech-news {
+        width: 100%;
+        height: 129px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 0px 0 50px 30px;
+        padding: 0;
+        gap: 30px;
+    }
+
+    .tech-info {
+        font-size: 13px;
+        margin-top: 10px;
+        padding: 0;
+        line-height: 24px;
+    }
+
+    .pc-info,
+    .laptop-info,
+    .gaming-info {
+        width: 350px;
+        height: 129px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        margin: 0;
+    }
+
+    .retro-pc,
+    .laptops,
+    .gaming {
+        width: 226px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin-top: 5px;
+        /* gap: 10px; */
+    }
+
+    .tech-title {
+        font-size: 18px;
+    }
+
+    .tech-info {
+        font-size: 15px;
+    }
+
+}
